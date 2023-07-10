@@ -7,7 +7,7 @@ import { Router, ActivatedRoute } from '@angular/router';
   styleUrls: ['./heroes.component.css']
 })
 export class HeroesComponent {
- heroes:Heroe[]=[]; //ss
+ heroes:Heroe[]=[]; 
  heroesEncontrados: Heroe[]=[];
  searchTerm: string;
   
@@ -20,20 +20,18 @@ export class HeroesComponent {
     this.searchTerm = queryParams.get('searchTerm') ?? '';
     this.filtrarHeroes();
     });
-
-
   this.heroes = this._heroesService.getHeroes();
   console.log(this.heroes);
  }
-
  filtrarHeroes() {
-  this.heroesEncontrados = this._heroesService.buscarHeroes(this.searchTerm);
-  
-}
- //metodo para sacar la pos de cada heroe exp en html en el boton
+  if (this.searchTerm.trim() === '') {
+    this.heroesEncontrados = [];
+  } else {
+    this.heroesEncontrados = this._heroesService.buscarHeroes(this.searchTerm);
+  }}
+ //Método para sacar la pos de cada heroe en html en el boton
  verHeroe(idx: number){
   console.log(idx);
   this.Router.navigate(['/heroe', idx])
- }
+ }}
 
-}

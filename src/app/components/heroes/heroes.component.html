@@ -1,8 +1,8 @@
-<h1>Heroes <small>Marvel y DC</small></h1>
+<h1>Heroes: <small>Marvel y DC</small></h1>
 <div class="container">
+  <!-- Inicio de columna general: Muestra todos los héroes -->
   <div class="column">
-    <div class="col animated fadeIn fast" *ngFor="let heroe of heroes; let i = index">
-     
+    <div class="col animated fadeIn fast" *ngFor="let heroe of heroes; let i = index">  
       <div class="card mb-3" style="max-width: 540px;">
         <div class="row g-0">
           <div class="col-md-4">
@@ -18,16 +18,14 @@
           </div>
         </div>
       </div>
-        
     </div> 
     <!--Fin columna-->
     
   </div>
+  <!-- Inicio columna para resultados de búsqueda: -->
 <div class="column">
-  
   <h2>Resultados de Búsqueda</h2>
   <br>
-  
   <div *ngFor="let heroe of heroesEncontrados">    
     <div class="card border-dark mb-3" style="max-width: 18rem;">
       <div class="card-header">{{heroe.aparicion}}</div>
@@ -40,7 +38,6 @@
         <p class="card-text">{{heroe.bio}} </p>
       </div>
     </div>
-    
   </div>  
 </div>
 </div>

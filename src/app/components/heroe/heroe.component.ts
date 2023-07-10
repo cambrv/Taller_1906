@@ -1,7 +1,6 @@
 import { Component } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { HeroesService } from 'src/app/services/heroes.service';
-import { Heroe } from '../../services/heroes.service';
 @Component({
   selector: 'app-heroe',
   templateUrl: './heroe.component.html',
@@ -15,6 +14,5 @@ constructor(private activatedRoute:
     this.heroe=_heroeService.getHeroe(params['id'])
     console.log(params['id'])
   })
+ }
 }
-
-  }

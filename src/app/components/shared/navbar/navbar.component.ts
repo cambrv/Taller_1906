@@ -11,7 +11,7 @@ import { Router, ActivatedRoute } from '@angular/router';
 export class NavbarComponent {
   heroes:any[];
   heroesEncontrados: Heroe[] = [];
-  searchTerm: string='aquaman';
+  searchTerm: string='';
   
   constructor(private activatedRoute: ActivatedRoute, private heroesService: HeroesService, private Router:Router) {
     this.heroes = this.heroesService.getHeroes();

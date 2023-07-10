@@ -1,10 +1,10 @@
 .container {
     width: 100%;
-    overflow: hidden; /* Para que el contenedor se ajuste a las columnas flotantes */
-  }
-  
-  .column {
+    overflow: hidden; 
+}
+
+.column {
     width: 50%;
     float: left;
-  }
+}
   
