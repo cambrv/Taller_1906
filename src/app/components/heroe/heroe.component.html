@@ -1,0 +1,19 @@
+
+<div class="col animated fadeIn fast" >
+
+</div><h1> {{heroe.nombre}} <small>{{heroe.aparicion}}</small></h1>
+<div class="row">
+    <div class="col-md-4">
+        <img [src]="heroe.img" alt="">
+        <br><br>
+        <a href="heroes" [routerLink]="['heroes']" class="btn btn-outline-danger btn-block"> REGRESAR</a>
+    </div>
+    <div class="col-md-8">
+        <h3>{{heroe.nombre}}</h3>
+        <br>
+        <p>
+            {{heroe.bio}}
+        </p>
+    </div>  
+    <img class="img" *ngIf="heroe.casa == 'Marvel'" src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b9/Marvel_Logo.svg/800px-Marvel_Logo.svg.png" alt="Marvel">
+    <img class="img" *ngIf="heroe.casa == 'DC'" src="https://upload.wikimedia.org/wikipedia/commons/3/3d/DC_Comics_logo.svg" alt="DC">
